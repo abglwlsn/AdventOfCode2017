@@ -32,5 +32,11 @@ namespace AdventOfCode2017.Infrastructure
             }
             return true;
         }
+
+        public static int[] SeparateStringToIntArray(this string number)
+        {
+            var characters = number.ToArray().Select(n => n.ToString()).ToArray();
+            return Array.ConvertAll(characters, Convert.ToInt32);
+        }
     }
 }

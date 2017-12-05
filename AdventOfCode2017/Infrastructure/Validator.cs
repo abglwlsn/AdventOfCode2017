@@ -15,6 +15,21 @@ namespace AdventOfCode2017.Infrastructure
             foreach (var phrase in phrases)
             {
                 var sections = phrase.SplitBySpaceOrTab().ToList();
+                if (DistinctEntriesMatchTotalEntries(sections))
+                {
+                    numberOfValidPhrases++;
+                }
+            }
+
+            return numberOfValidPhrases;
+        }
+
+        public int GetNumberOfValidPassphrasesWithoutAnagrams(string[] phrases)
+        {
+            var numberOfValidPhrases = 0;
+            foreach (var phrase in phrases)
+            {
+                var sections = phrase.SplitBySpaceOrTab().ToList();
                 if (DistinctEntriesMatchTotalEntries(sections) && NoEntryHasAnAnagram(sections))
                 {
                     numberOfValidPhrases++;

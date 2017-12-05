@@ -10,5 +10,7 @@ namespace AdventOfCode2017.Interfaces
     {
         int SumLikeNeighbors(string input);
         int SumLikeOpposites(string input);
+        int DetermineChecksumOfRowDifferences(string[] rows);
+        int DetermineChecksumOfRowQuotients(string[] rows);
     }
 }

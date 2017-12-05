@@ -12,7 +12,7 @@ namespace AdventOfCode2017.Infrastructure
         public int SumLikeNeighbors(string input)
         {
             var sum = 0;
-            var digits = SeparateInputStringIntoDigits(input);
+            var digits = input.SeparateStringToIntArray();
             for (var i = 0; i < digits.Length; i++)
             {
                 var compare = i == digits.Length - 1 ? digits[0] : digits[i + 1];
@@ -27,7 +27,7 @@ namespace AdventOfCode2017.Infrastructure
         public int SumLikeOpposites(string input)
         {
             var sum = 0;
-            var digits = SeparateInputStringIntoDigits(input);
+            var digits = input.SeparateStringToIntArray();
 
             for (var i = 0; i < digits.Length; i++)
             {
@@ -41,11 +41,7 @@ namespace AdventOfCode2017.Infrastructure
             return sum;
         }
 
-        private int[] SeparateInputStringIntoDigits(string number)
-        {
-            var characters = number.ToArray().Select(n => n.ToString()).ToArray();
-            return Array.ConvertAll(characters, Convert.ToInt32);
-        }
+
 
         private int GetPairHalfwayAroundArray(int[] digits, int index)
         {
@@ -78,7 +74,33 @@ namespace AdventOfCode2017.Infrastructure
             return checksum;
         }
 
-        public int DetermineChecksumOfRowDivision(string[] rows)
+        public int DetermineHighValue(IEnumerable<string> row)
+        {
+            var high = 0;
+            foreach (var expression in row)
+            {
+                var number = Convert.ToInt32(expression);
+                if (number > high)
+                { high = number; }
+            }
+
+            return high;
+        }
+
+        public int DetermineLowValue(IEnumerable<string> row)
+        {
+            var low = Int32.MaxValue;
+            foreach (var expression in row)
+            {
+                var number = Convert.ToInt32(expression);
+                if (number < low)
+                { low = number; }
+            }
+
+            return low;
+        }
+
+        public int DetermineChecksumOfRowQuotients(string[] rows)
         {
             var checksum = 0;
             foreach (var row in rows)
@@ -93,32 +115,6 @@ namespace AdventOfCode2017.Infrastructure
                 }
             }
             return checksum;
-        }
-
-        private int DetermineHighValue(IEnumerable<string> row)
-        {
-            var high = 0;
-            foreach (var expression in row)
-            {
-                var number = Convert.ToInt32(expression);
-                if (number > high)
-                { high = number; }
-            }
-
-            return high;
-        }
-
-        private int DetermineLowValue(IEnumerable<string> row)
-        {
-            var low = Int32.MaxValue;
-            foreach (var expression in row)
-            {
-                var number = Convert.ToInt32(expression);
-                if (number < low)
-                { low = number; }
-            }
-
-            return low;
         }
 
         private int FindWholeQuotient(int index, List<decimal> numbers)

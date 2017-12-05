@@ -18,7 +18,7 @@ namespace AdventOfCode2017
 
             /*Day Four*/    //Console.WriteLine(validator.GetNumberOfValidPassphrases(input));
             /*Day Two*/     //Console.WriteLine(calculator.DetermineChecksumOfRowDifferences(input));
-                            Console.WriteLine(calculator.DetermineChecksumOfRowDivision(input));
+                            Console.WriteLine(calculator.DetermineChecksumOfRowQuotients(input));
             /*Day One */    //Console.WriteLine(calculator.SumLikeOpposites(args[0]));
 
             Console.ReadLine();
