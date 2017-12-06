@@ -1,6 +1,0 @@
-C:\Users\aww\Documents\Visual Studio 2015\Projects\AdventOfCode2017\AdventOfCode2017\bin\Debug\AdventOfCode2017.exe.config
-C:\Users\aww\Documents\Visual Studio 2015\Projects\AdventOfCode2017\AdventOfCode2017\bin\Debug\AdventOfCode2017.exe
-C:\Users\aww\Documents\Visual Studio 2015\Projects\AdventOfCode2017\AdventOfCode2017\bin\Debug\AdventOfCode2017.pdb
-C:\Users\aww\Documents\Visual Studio 2015\Projects\AdventOfCode2017\AdventOfCode2017\obj\Debug\AdventOfCode2017.exe
-C:\Users\aww\Documents\Visual Studio 2015\Projects\AdventOfCode2017\AdventOfCode2017\obj\Debug\AdventOfCode2017.pdb
-C:\Users\aww\Documents\Visual Studio 2015\Projects\AdventOfCode2017\AdventOfCode2017\obj\Debug\AdventOfCode2017.csprojResolveAssemblyReference.cache
