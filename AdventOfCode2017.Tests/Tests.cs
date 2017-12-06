@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using AdventOfCode2017.Infrastructure;
 using AdventOfCode2017.Models;
 using Xunit;
@@ -108,5 +109,25 @@ namespace AdventOfCode2017.Tests
 
             Assert.Equal(25071947, collection.StepsTaken);
         }
-}
+
+        [Fact]
+        public void DaySix_PartOne_ReturnsNumberOfRedistributionCycles()
+        {
+            var input = File.ReadAllLines($"{inputsPrefix}Day6.txt");
+            var allocation = new MemoryAllocation(input.First());
+            var result = allocation.GetTotalCyclesBeforeLoopRestart();
+            
+            Assert.Equal(7864, result);
+        }
+
+        [Fact]
+        public void DaySix_PartTwo_ReturnsNumberOfRedistributionCyclesInOneLoop()
+        {
+            var input = File.ReadAllLines($"{inputsPrefix}Day6.txt");
+            var allocation = new MemoryAllocation(input.First());
+            var result = allocation.GetCyclesForCompleteLoop();
+
+            Assert.Equal(1695, result);
+        }
+    }
 }

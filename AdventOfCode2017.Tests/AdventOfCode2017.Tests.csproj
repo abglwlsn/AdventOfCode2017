@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="MapToTests.cs" />
     <Compile Include="Models\InstructionSetTests.cs" />
+    <Compile Include="Models\MemoryAllocationTests.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +94,7 @@
     <Content Include="Inputs\Day3.txt" />
     <Content Include="Inputs\Day2.txt" />
     <Content Include="Inputs\Day5.txt" />
+    <Content Include="Inputs\Day6.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
