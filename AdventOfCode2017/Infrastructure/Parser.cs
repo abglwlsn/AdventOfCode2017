@@ -8,12 +8,6 @@ namespace AdventOfCode2017.Infrastructure
 {
     public static class Parser
     {
-        public static IEnumerable<string> SplitByNewLine(this string input)
-        {
-            var array = input.Split('\r', '\n').Select(i => i.Trim()).Where(i => !string.IsNullOrEmpty(i));
-            return array.AsEnumerable();
-        }
-
         public static IEnumerable<string> SplitBySpaceOrTab(this string input)
         {
             var array = input.Split(' ', '\t').Select(i => i.Trim()).Where(i => !string.IsNullOrEmpty(i));

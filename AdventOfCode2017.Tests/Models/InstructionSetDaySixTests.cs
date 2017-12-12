@@ -8,7 +8,7 @@ using Xunit;
 
 namespace AdventOfCode2017.Tests.Models
 {
-    public class InstructionSetTests
+    public class InstructionSetDaySixTests
     {
         private string[] input => new[] {"1", "-2", "3"};
         private string[] inputTwo => new[] {"1", "1", "-2", "-4", "-4"};
@@ -16,7 +16,7 @@ namespace AdventOfCode2017.Tests.Models
         [Fact]
         public void ConstructorShould_ReturnInstructionSetWithPopulatedIntArray()
         {
-            var collection = new InstructionSet(input);
+            var collection = new InstructionSetDaySix(input);
 
             Assert.Equal(0, collection.TargetIndex);
             Assert.Equal(0, collection.ActiveIndex);
@@ -28,7 +28,7 @@ namespace AdventOfCode2017.Tests.Models
         [Fact]
         public void PerformInstructionsPartOneShould_CountSteps()
         {
-            var collection = new InstructionSet(input);
+            var collection = new InstructionSetDaySix(input);
             collection.PerformInstructionsPartOne();
 
             Assert.Equal(4, collection.StepsTaken);
@@ -39,12 +39,12 @@ namespace AdventOfCode2017.Tests.Models
         [Fact]
         public void PerformInstructionsPartTwoShould_CountStepsWithDecrementIfOffsetOverThree()
         {
-            var collection = new InstructionSet(inputTwo);
+            var collection = new InstructionSetDaySix(inputTwo);
             collection.PerformInstructionsPartTwo();
 
             Assert.Equal(24, collection.StepsTaken);
 
-            var oneCollection = new InstructionSet(inputTwo);
+            var oneCollection = new InstructionSetDaySix(inputTwo);
             oneCollection.PerformInstructionsPartOne();
             Assert.Equal(12, oneCollection.StepsTaken);
         }

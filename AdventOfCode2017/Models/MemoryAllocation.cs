@@ -29,10 +29,10 @@ namespace AdventOfCode2017.Models
         {
             MemoryBankHistory.Add(MemoryBanks);
 
-            var blocks = MemoryBanks[targetIndex];
-
             var redistributed = MemoryBanks.ToArray();
+            var blocks = redistributed[targetIndex];
             redistributed[targetIndex++] = 0;
+
             while (blocks > 0)
             {
                 if (targetIndex >= redistributed.Length)

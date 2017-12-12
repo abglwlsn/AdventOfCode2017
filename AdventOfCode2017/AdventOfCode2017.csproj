@@ -51,8 +51,15 @@
     <Compile Include="Infrastructure\Validator.cs" />
     <Compile Include="Interfaces\ICalculate.cs" />
     <Compile Include="Interfaces\IValidate.cs" />
-    <Compile Include="Models\InstructionSet.cs" />
+    <Compile Include="Models\Disc.cs" />
+    <Compile Include="Models\Instruction.cs" />
+    <Compile Include="Models\InstructionSetDayEight.cs" />
+    <Compile Include="Models\InstructionSetDaySix.cs" />
     <Compile Include="Models\MemoryAllocation.cs" />
+    <Compile Include="Models\Network.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Models\ProgramTree.cs" />
+    <Compile Include="Models\Register.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

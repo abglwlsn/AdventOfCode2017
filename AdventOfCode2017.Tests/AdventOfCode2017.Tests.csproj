@@ -71,8 +71,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="MapToTests.cs" />
-    <Compile Include="Models\InstructionSetTests.cs" />
+    <Compile Include="Models\DiscTests.cs" />
+    <Compile Include="Models\InstructionSetDaySixTests.cs" />
     <Compile Include="Models\MemoryAllocationTests.cs" />
+    <Compile Include="Models\ProgramTreeTests.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,12 +91,15 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Inputs\Day12.txt" />
     <Content Include="Inputs\Day4.txt" />
     <Content Include="Inputs\Day1.txt" />
     <Content Include="Inputs\Day3.txt" />
     <Content Include="Inputs\Day2.txt" />
     <Content Include="Inputs\Day5.txt" />
     <Content Include="Inputs\Day6.txt" />
+    <Content Include="Inputs\Day7.txt" />
+    <Content Include="Inputs\Day8.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

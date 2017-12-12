@@ -7,9 +7,9 @@ using AdventOfCode2017.Infrastructure;
 
 namespace AdventOfCode2017.Models
 {
-    public class InstructionSet
+    public class InstructionSetDaySix
     {
-        public InstructionSet(string[] input)
+        public InstructionSetDaySix(string[] input)
         {
             Instructions = input.AsIntegerArray();
             TargetIndex = 0;
